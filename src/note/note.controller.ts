@@ -13,14 +13,14 @@ import { dtoNote } from './dto/dto.note';
 export class NotesController {
   constructor(private readonly notesService: NotesService) {}
 
-  // GET /clients/:clientId/notes
+  // .../clients/:clientId/notes
   @Get()
   listNotes(@Param('clientId') clientId: number) {
     const notes = this.notesService.getNotesForClient(clientId);
     return { clientId, notes };
   }
 
-  // POST /clients/:clientId/notes
+  // .../clients/:clientId/notes
   @Post()
   @HttpCode(201)
   addNote(

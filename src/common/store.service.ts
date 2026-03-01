@@ -1,6 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { Client, Note } from '../common/interfaces';
 
+// in memory data
+// implement database calls here
+
 @Injectable()
 export class StoreService {
   readonly clients: Client[] = [

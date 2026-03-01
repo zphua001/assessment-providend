@@ -8,6 +8,7 @@ export interface Client {
 export interface Note {
   id?: UUID;
   clientId: number;
+  //authorId: number;
   content: string;
   createdAt: Date;
 }
